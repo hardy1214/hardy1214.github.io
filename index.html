@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>櫻月｜Minecraft 生存伺服器</title>
+  <meta name="description" content="櫻月 Minecraft 生存伺服器｜生存、RPG、經濟、公會與社群。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="#top">櫻月</a>
+    <nav>
+      <a href="#features">特色</a>
+      <a href="#world">世界</a>
+      <a href="#team">團隊招募</a>
+      <a href="#discord">Discord</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">MINECRAFT 26.2 · SURVIVAL SERVER</p>
+        <h1>櫻月</h1>
+        <p class="subtitle">在櫻花與神木之間，開始屬於你的故事。</p>
+        <p class="intro">
+          一個正在持續建設中的 Minecraft 生存世界，結合生存、RPG、經濟、公會與社群玩法。
+          我們希望和玩家一起，把櫻月慢慢變成一個真正屬於大家的世界。
+        </p>
+        <div class="buttons">
+          <a class="button primary" href="#join">立即加入</a>
+          <a class="button secondary" href="#team">加入團隊</a>
+        </div>
+      </div>
+      <div class="moon">
+        <div class="tree">🌸</div>
+        <div class="moon-circle"></div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="section-title">
+        <p class="eyebrow">FEATURES</p>
+        <h2>一個不只是生存的世界</h2>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <span>🌿</span>
+          <h3>生存玩法</h3>
+          <p>保留 Minecraft 生存的核心體驗，同時加入更多可以長期遊玩的內容。</p>
+        </article>
+        <article class="card">
+          <span>⚔️</span>
+          <h3>RPG 元素</h3>
+          <p>技能、任務、成長與探索，讓每一次冒險都有新的目標。</p>
+        </article>
+        <article class="card">
+          <span>💰</span>
+          <h3>玩家經濟</h3>
+          <p>建立自己的商店、交易與財富，讓玩家之間形成真正的經濟活動。</p>
+        </article>
+        <article class="card">
+          <span>🏰</span>
+          <h3>公會與社群</h3>
+          <p>和朋友建立公會，一起發展領地、參與活動並留下屬於你們的故事。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="world section" id="world">
+      <div class="world-text">
+        <p class="eyebrow">THE WORLD OF YUE</p>
+        <h2>櫻花神木下，新的旅程正在開始。</h2>
+        <p>
+          櫻月以櫻花與神木為核心意象，從出生點開始，逐步建立完整的遊戲世界。
+          我們不希望所有內容一開始就被定死，而是讓伺服器隨著玩家與團隊一起成長。
+        </p>
+        <p>
+          無論你想蓋一座城市、經營商店、探索世界，或只是找一群朋友一起生存，
+          都可以在這裡找到自己的位置。
+        </p>
+      </div>
+      <div class="world-art">
+        <div class="star s1"></div><div class="star s2"></div><div class="star s3"></div>
+        <div class="big-moon"></div>
+        <div class="silhouette">🌸</div>
+      </div>
+    </section>
+
+    <section class="section recruitment" id="team">
+      <div class="section-title">
+        <p class="eyebrow">JOIN OUR TEAM</p>
+        <h2>我們也正在尋找你</h2>
+        <p>櫻月還在成長，如果你想參與一個伺服器從零開始的過程，歡迎加入我們。</p>
+      </div>
+      <div class="roles">
+        <div>🏗️ <strong>建築／地圖</strong><small>打造櫻月的世界</small></div>
+        <div>⚙️ <strong>插件／技術</strong><small>一起開發與維護系統</small></div>
+        <div>🎨 <strong>美術／設計</strong><small>視覺與品牌設計</small></div>
+        <div>📋 <strong>活動企劃</strong><small>設計玩家活動</small></div>
+        <div>💬 <strong>社群管理</strong><small>經營 Discord 與社群</small></div>
+        <div>🧪 <strong>測試人員</strong><small>協助找出問題</small></div>
+      </div>
+      <div class="center">
+        <a class="button primary" href="#" id="teamLink">應徵團隊</a>
+      </div>
+    </section>
+
+    <section class="join section" id="join">
+      <div class="join-box">
+        <p class="eyebrow">START YOUR JOURNEY</p>
+        <h2>準備好加入櫻月了嗎？</h2>
+        <p>目前版本：<strong>26.2</strong></p>
+        <div class="server-address">
+          <span>伺服器 IP</span>
+          <code id="serverIp">play.example.com</code>
+          <button id="copyIp">複製</button>
+        </div>
+        <a class="button primary" href="#" id="discord">加入 Discord</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>🌸 櫻月 Minecraft Server</div>
+    <div>© 2026 櫻月｜All Rights Reserved.</div>
+  </footer>
+
+  <script>
+    const ip = document.getElementById("serverIp").textContent;
+    document.getElementById("copyIp").addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(ip);
+        document.getElementById("copyIp").textContent = "已複製";
+        setTimeout(() => document.getElementById("copyIp").textContent = "複製", 1500);
+      } catch {
+        alert("請手動複製伺服器 IP");
+      }
+    });
+  </script>
+</body>
+</html>
