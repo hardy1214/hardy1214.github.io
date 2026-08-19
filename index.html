@@ -16,7 +16,7 @@
             <a href="#features">特色介紹</a>
             <a href="#world">世界景觀</a>
             <a href="team/">團隊簡介 (正在招募中)</a>
-            <a href="#join">加入我們</a>
+            <a href="#join" style="color: var(--pink2); font-weight: bold;">遊玩遊戲 🌸</a>
         </nav>
     </div>
 
@@ -30,7 +30,7 @@
                 「櫻月」是一個以唯美日式和風為主題的 Minecraft 生存伺服器。我們精心打造了充滿詩意的櫻花林、神社古都，以及和諧溫馨的冒險社群。不論你喜愛建築、生存、還是結交夥伴，櫻月伺服器都是你完美的歸宿。
             </p>
             <div class="buttons">
-                <a href="#join" class="button primary">立即加入遊戲</a>
+                <a href="#join" class="button primary">遊玩遊戲</a>
                 <a href="team/" class="button secondary">團隊簡介 (正在招募中)</a>
             </div>
         </div>
@@ -87,51 +87,27 @@
         </div>
     </div>
 
-    <!-- 團隊簡介區 (Team Intro teaser) -->
-    <div class="section" id="team-teaser">
-        <div class="section-title">
-            <h2>伺服器團隊</h2>
-            <p>守護櫻之幻境的核心力量。我們重視每一位成員的付出，並持續歡迎熱情的夥伴加入！</p>
-        </div>
-        <div class="roles">
-            <div>
-                <span style="font-size: 24px;">👑</span>
-                <strong>管理組 Admin</strong>
-                <small>負責伺服器營運決策與日常秩序維護。</small>
-            </div>
-            <div>
-                <span style="font-size: 24px;">🔧</span>
-                <strong>技術組 Developer</strong>
-                <small>負責插件調試、網頁開發與硬體維護。</small>
-            </div>
-            <!-- 引導點擊前往獨立團隊簡介與招募頁面 -->
-            <div style="cursor: pointer; border: 1px solid var(--pink); background: rgba(242, 154, 181, 0.05); position: relative; transition: 0.2s;" onclick="window.location.href='team/'">
-                <span style="font-size: 24px; color: var(--pink);">🌸</span>
-                <strong>團隊簡介 (正在招募中)</strong>
-                <small>我們正在尋找優秀的小幫手、建築師與企劃！點擊此處了解團隊詳情與招募規範。</small>
-                <div style="margin-left: 28px; margin-top: 15px; font-weight: bold; color: var(--pink2); font-size: 13px;">
-                    前往專屬頁面 ➔
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 立即加入區 (Join Section) -->
+    <!-- 立即加入/遊玩區 (Play Section) -->
     <div class="section join" id="join" style="margin: auto;">
         <div class="join-box">
-            <h2>立即加入櫻月伺服器</h2>
-            <p>複製下方 IP 位址，在 Minecraft 中新增伺服器即可直接進入遊戲！</p>
+            <h2>立即遊玩櫻月伺服器</h2>
+            <p>複製下方 IP 位址加入遊戲，或者一鍵加入我們的 Discord 官方社群！</p>
             <div class="server-address">
                 <span>伺服器位址 (IP)</span>
                 <code id="ip-text">play.sakuramoons.com</code>
                 <button onclick="copyIP()" class="primary">複製 IP</button>
+                <a href="https://discord.gg/K4SQHdcmTw" target="_blank" style="background: #5865f2; color: white; border-radius: 9px; padding: 7px 14px; font-weight: bold; font-size: 13px; display: inline-block; text-decoration: none; transition: 0.2s; text-align: center; line-height: 1.5; border: 0;" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">官方 DC 💬</a>
             </div>
         </div>
     </div>
 
     <!-- 頁尾 (Footer) -->
     <footer>
-        <div>&copy; 2026 櫻月 SAKURAMOONS Minecraft 伺服器. 本伺服器與 Mojang Synergies AB 無任何官方關聯。</div>
+        <div>
+            &copy; 2026 櫻月 SAKURAMOONS Minecraft 伺服器. 本伺服器與 Mojang Synergies AB 無任何官方關聯。
+            <br>
+            <a href="https://discord.gg/K4SQHdcmTw" target="_blank" style="color: var(--pink); text-decoration: underline; margin-top: 6px; display: inline-block;">點此加入官方 Discord 群組 💬</a>
+        </div>
         <div>聯絡信箱: contact@sakuramoons.com</div>
     </footer>
 
