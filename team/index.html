@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>團隊簡介與招募 | 櫻月 SAKURAMOONS</title>
+    <!-- 引入根目錄的 CSS 樣式表 -->
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* 團隊頁專屬微調 */
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--pink);
+            font-weight: 700;
+            margin-bottom: 30px;
+            transition: 0.2s;
+        }
+        .back-home:hover {
+            color: var(--pink2);
+            transform: translateX(-4px);
+        }
+        .recruitment-section {
+            background: rgba(255, 255, 255, 0.02);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+            padding: 80px 7%;
+            text-align: center;
+        }
+        .cta-container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px;
+            border: 1px solid rgba(242, 154, 181, 0.2);
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+        }
+        .cta-container h3 {
+            font-size: 28px;
+            color: var(--pink2);
+            margin-bottom: 15px;
+        }
+        .cta-container p {
+            color: var(--muted);
+            font-size: 16px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        /* 調整招募卡片佈局 */
+        .recruits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 40px;
+        }
+        .recruit-card {
+            padding: 24px;
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            background: var(--card);
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+        }
+        .recruit-card::before {
+            content: "招募中";
+            position: absolute;
+            top: 12px;
+            right: -25px;
+            background: var(--pink);
+            color: #24151b;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 2px 25px;
+            transform: rotate(45deg);
+        }
+        .recruit-card span {
+            font-size: 28px;
+            display: block;
+            margin-bottom: 12px;
+        }
+        .recruit-card h4 {
+            margin: 0 0 8px;
+            font-size: 18px;
+            color: var(--text);
+        }
+        .recruit-card p {
+            margin: 0;
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+        @media (max-width: 800px) {
+            .recruits-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 500px) {
+            .recruits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 頂部導覽列 -->
+    <div class="navbar">
+        <div class="logo">櫻月 SAKURAMOONS</div>
+        <nav>
+            <a href="../">首頁</a>
+            <a href="../#features">特色介紹</a>
+            <a href="../#world">世界景觀</a>
+            <a href="#" style="color: var(--pink2);">團隊簡介 (正在招募中)</a>
+            <a href="../#join">加入我們</a>
+        </nav>
+    </div>
+
+    <!-- 團隊主視覺區 -->
+    <div class="section" style="padding-top: 60px; padding-bottom: 40px;">
+        <a href="../" class="back-home">➔ 返回首頁</a>
+        
+        <div class="section-title">
+            <p class="eyebrow" style="margin-bottom: 10px;">SAKURAMOONS TEAM</p>
+            <h2>管理團隊與成員介紹</h2>
+            <p style="font-size: 18px;">
+                守護著櫻之幻境的核心力量。櫻月伺服器由熱愛 Minecraft 的玩家共同維護，我們致力於建立一個友善、精緻且充滿人情味的溫馨社群。
+            </p>
+        </div>
+
+        <!-- 現役團隊成員 -->
+        <h3 style="margin-top: 50px; border-left: 4px solid var(--pink); padding-left: 15px; color: var(--pink2);">現役成員</h3>
+        <div class="roles" style="margin-top: 20px;">
+            <div style="border: 1px solid var(--pink); background: linear-gradient(135deg, rgba(242, 154, 181, 0.1), transparent); box-shadow: 0 0 20px rgba(242, 154, 181, 0.05);">
+                <span style="font-size: 32px;">👑</span>
+                <strong>服主 Owner</strong>
+                <small style="color: var(--pink2); font-weight: bold;">我 (服主)</small>
+                <p style="margin-left: 28px; margin-top: 10px; font-size: 14px; color: var(--muted);">
+                    負責伺服器的整體營運、世界觀策劃與核心決策。致力於提供玩家最完美的和風生存世界。
+                </p>
+            </div>
+            
+            <div style="opacity: 0.7;">
+                <span style="font-size: 32px;">👮</span>
+                <strong>管理員 Administrator</strong>
+                <small style="color: var(--muted);">（目前從缺）</small>
+                <p style="margin-left: 28px; margin-top: 10px; font-size: 14px; color: var(--muted);">
+                    負責遊戲內日常秩序維護、玩家問題排解以及違規行為審查。
+                </p>
+            </div>
+
+            <div style="opacity: 0.7;">
+                <span style="font-size: 32px;">🔧</span>
+                <strong>技術人員 Developer</strong>
+                <small style="color: var(--muted);">（目前從缺）</small>
+                <p style="margin-left: 28px; margin-top: 10px; font-size: 14px; color: var(--muted);">
+                    負責伺服器插件調試、後台維護與網頁開發，確保伺服器穩定流暢運行。
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 職缺招募區 -->
+    <div class="section" style="background: rgba(255,255,255,0.01); border-top: 1px solid var(--line); padding-top: 60px;">
+        <div class="section-title">
+            <h2>開放招募職缺</h2>
+            <p>我們正在尋找志同道合的夥伴！如果你對和風生存充滿熱情，歡迎加入我們的開發與管理行列，一起雕琢這片美麗的櫻花世界。</p>
+        </div>
+
+        <div class="recruits-grid">
+            <div class="recruit-card">
+                <span>🏗️</span>
+                <h4>建築／地圖製作</h4>
+                <p>負責伺服器主城、節日活動場景、副本與景點的規劃與搭建，精通日式和風與古風建築風格者尤佳。</p>
+            </div>
+            
+            <div class="recruit-card">
+                <span>⚙️</span>
+                <h4>遊戲內市面插件設計</h4>
+                <p>負責自訂怪物、RPG 物品屬性、特色技能、經濟與任務系統等市面常見插件的細節設計與配置。</p>
+            </div>
+
+            <div class="recruit-card">
+                <span>🎨</span>
+                <h4>美術／設計</h4>
+                <p>負責伺服器官方宣傳圖、網頁視覺素材、自訂材質包（如有）以及社群貼圖的繪製與排版設計。</p>
+            </div>
+
+            <div class="recruit-card">
+                <span>📋</span>
+                <h4>活動企劃</h4>
+                <p>策劃伺服器內部的節日祭典、生存競賽、副本探險等趣味活動，並編寫活動流程與規劃獎勵項目。</p>
+            </div>
+
+            <div class="recruit-card">
+                <span>💬</span>
+                <h4>社群管理</h4>
+                <p>管理 Discord 伺服器與玩家社群，解答玩家疑問，籌備玩家互動，維護良好友善的玩家交流氛圍。</p>
+            </div>
+
+            <div class="recruit-card">
+                <span>🧪</span>
+                <h4>測試人員</h4>
+                <p>搶先體驗新版本與新功能！測試插件相容性、尋找遊戲漏洞 (Bug)，提供優化反饋，確保玩家遊玩品質。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 招募引導 CTA 區 (Google 表單連結) -->
+    <div class="recruitment-section">
+        <div class="cta-container">
+            <h3>🌸 遞交您的申請</h3>
+            <p>
+                想要成為櫻月團隊的一員，為大家創造更棒的遊戲體驗嗎？<br>
+                我們已為你準備好便捷的招募流程，點擊下方按鈕即可開啟 Google 表單進行申請填寫。
+            </p>
+            <a href="https://forms.gle/8wPSByePEnMnqgU47" target="_blank" class="button primary" style="font-size: 18px; padding: 14px 36px;">
+                填寫 Google 招募表單 ➔
+            </a>
+            <div style="margin-top: 15px; font-size: 13px; color: var(--muted);">
+                * 點擊後將會在新分頁開啟 Google Forms 頁面。填寫完畢後我們將儘快透過 Discord 與您聯絡！
+            </div>
+        </div>
+    </div>
+
+    <!-- 頁尾 (Footer) -->
+    <footer>
+        <div>&copy; 2026 櫻月 SAKURAMOONS Minecraft 伺服器. 本伺服器與 Mojang Synergies AB 無任何官方關聯。</div>
+        <div>聯絡信箱: contact@sakuramoons.com</div>
+    </footer>
+
+</body>
+</html>
