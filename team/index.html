@@ -113,8 +113,8 @@
             <a href="../">首頁</a>
             <a href="../#features">特色介紹</a>
             <a href="../#world">世界景觀</a>
-            <a href="#" style="color: var(--pink2);">團隊簡介 (正在招募中)</a>
-            <a href="../#join">加入我們</a>
+            <a href="#" style="color: var(--pink2); font-weight: 700;">團隊簡介 (正在招募中)</a>
+            <a href="../#join">遊玩遊戲 🌸</a>
         </nav>
     </div>
 
@@ -131,13 +131,13 @@
         </div>
 
         <!-- 現役團隊成員 -->
-        <h3 style="margin-top: 50px; border-left: 4px solid var(--pink); padding-left: 15px; color: var(--pink2);">現役成員</h3>
+        <h3 style="margin-top: 50px; border-left: 4px solid var(--pink); padding-left: 15px; color: var(--pink2); Woodlands: pre-line;">現役成員</h3>
         <div class="roles" style="margin-top: 20px;">
             <div style="border: 1px solid var(--pink); background: linear-gradient(135deg, rgba(242, 154, 181, 0.1), transparent); box-shadow: 0 0 20px rgba(242, 154, 181, 0.05);">
                 <span style="font-size: 32px;">👑</span>
                 <strong>服主 Owner</strong>
                 <small style="color: var(--pink2); font-weight: bold;">我 (服主)</small>
-                <p style="margin-left: 28px; margin-top: 10px; font-size: 14px; color: var(--muted);">
+                <p style="margin-left: 28px; margin-top: 10px; font-size: 14px; color: var(--muted); line-height: 1.6;">
                     負責伺服器的整體營運、世界觀策劃與核心決策。致力於提供玩家最完美的和風生存世界。
                 </p>
             </div>
@@ -146,7 +146,7 @@
                 <span style="font-size: 32px;">👮</span>
                 <strong>管理員 Administrator</strong>
                 <small style="color: var(--muted);">（目前從缺）</small>
-                <p style="margin-left: 28px; margin-top: 10px; font-size: 14px; color: var(--muted);">
+                <p style="margin-left: 28px; margin-top: 10px; font-size: 14px; color: var(--muted); line-height: 1.6;">
                     負責遊戲內日常秩序維護、玩家問題排解以及違規行為審查。
                 </p>
             </div>
@@ -155,7 +155,7 @@
                 <span style="font-size: 32px;">🔧</span>
                 <strong>技術人員 Developer</strong>
                 <small style="color: var(--muted);">（目前從缺）</small>
-                <p style="margin-left: 28px; margin-top: 10px; font-size: 14px; color: var(--muted);">
+                <p style="margin-left: 28px; margin-top: 10px; font-size: 14px; color: var(--muted); line-height: 1.6;">
                     負責伺服器插件調試、後台維護與網頁開發，確保伺服器穩定流暢運行。
                 </p>
             </div>
@@ -216,7 +216,7 @@
                 想要成為櫻月團隊的一員，為大家創造更棒的遊戲體驗嗎？<br>
                 我們已為你準備好便捷的招募流程，點擊下方按鈕即可開啟 Google 表單進行申請填寫。
             </p>
-            <a href="https://forms.gle/8wPSByePEnMnqgU47" target="_blank" class="button primary" style="font-size: 18px; padding: 14px 36px;">
+            <a href="https://forms.gle/8wPSByePEnMnqgU47" target="_blank" class="button primary" style="font-size: 18px; padding: 14px 36px; text-decoration: none;">
                 填寫 Google 招募表單 ➔
             </a>
             <div style="margin-top: 15px; font-size: 13px; color: var(--muted);">
@@ -227,9 +227,107 @@
 
     <!-- 頁尾 (Footer) -->
     <footer>
-        <div>&copy; 2026 櫻月 SAKURAMOONS Minecraft 伺服器. 本伺服器與 Mojang Synergies AB 無任何官方關聯。</div>
+        <div>
+            &copy; 2026 櫻月 SAKURAMOONS Minecraft 伺服器. 本伺服器與 Mojang Synergies AB 無任何官方關聯。
+            <br>
+            <a href="https://discord.gg/K4SQHdcmTw" target="_blank" style="color: var(--pink); text-decoration: underline; margin-top: 6px; display: inline-block;">點此加入官方 Discord 群組 💬</a>
+        </div>
         <div>聯絡信箱: contact@sakuramoons.com</div>
     </footer>
 
+    <!-- 櫻花飄落特效 (Falling Sakura Animation) -->
+    <script>
+        (function() {
+            // 建立落櫻特效樣式
+            const style = document.createElement('style');
+            style.textContent = `
+                .sakura-petal {
+                    position: fixed;
+                    top: -20px;
+                    pointer-events: none;
+                    z-index: 9999;
+                    background: linear-gradient(135deg, #f29ab5, #ffc1d3);
+                    border-radius: 50% 0 50% 50%;
+                    opacity: 0.8;
+                    transform-origin: left top;
+                    animation: sakura-fall linear forwards;
+                }
+                @keyframes sakura-fall {
+                    0% {
+                        transform: translateY(0) translateX(0) rotate(0deg) scale(0.8);
+                        opacity: 0;
+                    }
+                    10% {
+                        opacity: 0.85;
+                    }
+                    90% {
+                        opacity: 0.85;
+                    }
+                    100% {
+                        transform: translateY(105vh) translateX(120px) rotate(360deg) scale(0.5);
+                        opacity: 0;
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+
+            // 產生櫻花瓣
+            function createPetal() {
+                const petal = document.createElement('div');
+                petal.classList.add('sakura-petal');
+                
+                // 隨機初始位置、大小、時間與擺動方向
+                const startLeft = Math.random() * window.innerWidth;
+                const size = Math.random() * 8 + 8; // 8px 到 16px
+                const duration = Math.random() * 5 + 6; // 6s 到 11s
+                const delay = Math.random() * 3;
+                
+                petal.style.left = startLeft + 'px';
+                petal.style.width = size + 'px';
+                petal.style.height = (size * 0.8) + 'px';
+                petal.style.animationDuration = duration + 's';
+                petal.style.animationDelay = delay + 's';
+                
+                // 隨機微調櫻花瓣的傾斜角度
+                const rotation = Math.random() * 45;
+                petal.style.transform = `rotate(${rotation}deg)`;
+                
+                // 隨機設定兩種擺動動畫路徑 (順時針/逆時針)
+                const swayType = Math.random() > 0.5 ? 'sakura-fall' : 'sakura-fall-reverse';
+                petal.style.animationName = swayType;
+
+                document.body.appendChild(petal);
+                
+                // 動畫結束後自動移除花瓣
+                setTimeout(() => {
+                    petal.remove();
+                }, (duration + delay) * 1000);
+            }
+
+            // 動態新增反向擺動的動畫
+            const styleSheet = style.sheet;
+            styleSheet.insertRule(`
+                @keyframes sakura-fall-reverse {
+                    0% {
+                        transform: translateY(0) translateX(0) rotate(0deg) scale(0.8);
+                        opacity: 0;
+                    }
+                    10% {
+                        opacity: 0.85;
+                    }
+                    90% {
+                        opacity: 0.85;
+                    }
+                    100% {
+                        transform: translateY(105vh) translateX(-120px) rotate(-360deg) scale(0.5);
+                        opacity: 0;
+                    }
+                }
+            `, styleSheet.cssRules.length);
+
+            // 每隔 300 毫秒生成一片花瓣
+            setInterval(createPetal, 300);
+        })();
+    </script>
 </body>
 </html>
