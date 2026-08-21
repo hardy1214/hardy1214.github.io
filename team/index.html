@@ -3,8 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>櫻月 SAKURAMOONS | Minecraft 和風生存伺服器</title>
-    <link rel="stylesheet" href="style.css">
+    <title>團隊簡介與招募 | 櫻月 SAKURAMOONS</title>
+    <!-- 引入根目錄的 CSS 樣式表 -->
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* 團隊頁專屬微調 */
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--pink);
+            font-weight: 700;
+            margin-bottom: 30px;
+            transition: 0.2s;
+        }
+        .back-home:hover {
+            color: var(--pink2);
+            transform: translateX(-4px);
+        }
+        .recruitment-section {
+            background: rgba(255, 255, 255, 0.02);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+            padding: 80px 7%;
+            text-align: center;
+        }
+        .cta-container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px;
+            border: 1px solid rgba(242, 154, 181, 0.2);
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+        }
+        .cta-container h3 {
+            font-size: 28px;
+            color: var(--pink2);
+            margin-bottom: 15px;
+        }
+        .cta-container p {
+            color: var(--muted);
+            font-size: 16px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        /* 調整招募卡片佈局 */
+        .recruits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 40px;
+        }
+        .recruit-card {
+            padding: 24px;
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            background: var(--card);
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+        }
+        .recruit-card::before {
+            content: "招募中";
+            position: absolute;
+            top: 12px;
+            right: -25px;
+            background: var(--pink);
+            color: #24151b;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 2px 25px;
+            transform: rotate(45deg);
+        }
+        .recruit-card span {
+            font-size: 28px;
+            display: block;
+            margin-bottom: 12px;
+        }
+        .recruit-card h4 {
+            margin: 0 0 8px;
+            font-size: 18px;
+            color: var(--text);
+        }
+        .recruit-card p {
+            margin: 0;
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+        @media (max-width: 800px) {
+            .recruits-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 500px) {
+            .recruits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -12,128 +110,117 @@
     <div class="navbar">
         <div class="logo">櫻月 SAKURAMOONS</div>
         <nav>
-            <a href="#">首頁</a>
-            <a href="#features">特色介紹</a>
-            <a href="#world">世界景觀</a>
-            <a href="team/">團隊簡介 (正在招募中)</a>
-            <a href="#join" style="color: var(--pink2); font-weight: 700;">遊玩遊戲 🌸</a>
+            <a href="../">首頁</a>
+            <a href="../#features">特色介紹</a>
+            <a href="../#world">世界景觀</a>
+            <a href="#" style="color: var(--pink2); font-weight: 700;">團隊簡介 (正在招募中)</a>
+            <a href="../#join">遊玩遊戲 🌸</a>
         </nav>
     </div>
 
-    <!-- 英雄首頁區 (Hero Section) -->
-    <div class="hero">
-        <div class="hero-content">
-            <p class="eyebrow">MINECRAFT 和風主題生存</p>
-            <h1>櫻月</h1>
-            <p class="subtitle">櫻之飛舞，明月高懸。在這裡，尋找與你同行的旅人。</p>
-            <p class="intro">
-                「櫻月」是一個以唯美日式和風為主題的 Minecraft 生存伺服器。我們精心打造了充滿詩意的櫻花林、神社古都，以及和諧溫馨的冒險社群。不論你喜愛建築、生存、還是結交夥伴，櫻月伺服器都是你完美的歸宿。
-            </p>
-            <div class="buttons">
-                <a href="#join" class="button primary">遊玩遊戲</a>
-                <a href="team/" class="button secondary">團隊簡介 (正在招募中)</a>
-            </div>
-        </div>
-        <div class="moon">
-            <div class="moon-circle"></div>
-            <div class="tree">🌸</div>
-        </div>
-    </div>
-
-    <!-- 伺服器特色區 (Features Section) -->
-    <div class="section" id="features">
+    <!-- 團隊主視覺區 -->
+    <div class="section" style="padding-top: 60px; padding-bottom: 40px;">
+        <a href="../" class="back-home">➔ 返回首頁</a>
+        
         <div class="section-title">
-            <h2>伺服器特色</h2>
-            <p>我們致力於提供最精緻的和風遊戲體驗，細心雕琢每一處細節，打造舒適好玩的生存環境。</p>
-        </div>
-        <div class="cards">
-            <div class="card">
-                <span>🌸</span>
-                <h3>櫻之幻境</h3>
-                <p>自訂的和風林地景觀，微風吹落漫天粉紅花瓣，沉浸於最極致的視覺盛宴。</p>
-            </div>
-            <div class="card">
-                <span>🏮</span>
-                <h3>和風盛典</h3>
-                <p>定期舉辦日式祭典活動、花火大會與趣味競賽，在充滿歡樂的氣氛中拉近彼此距離。</p>
-            </div>
-            <div class="card">
-                <span>🏯</span>
-                <h3>古典神社</h3>
-                <p>主城與各地景點完美融入日式古典神社與名勝城堡，提供滿滿的建築靈感。</p>
-            </div>
-            <div class="card">
-                <span>⚔️</span>
-                <h3>溫馨生存</h3>
-                <p>備有完善的領地系統與經濟系統，保障每位玩家的建築心血，讓你可以安心建築理想家園。</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- 世界觀 / 景觀展示區 (World Section) -->
-    <div class="world section" id="world">
-        <div class="world-text">
-            <h2>探索明月下的神祕世界</h2>
-            <p>
-                當夜幕低垂，巨大的月亮緩緩升起，櫻花樹的剪影與星光交織成一幅唯美的畫卷。這是櫻月伺服器獨有的夜間景緻，等待著每一位旅人的探索與發現。我們深信，每一個在櫻花樹下相遇的玩家，都將寫下屬於他們獨一無二的故事。
+            <p class="eyebrow" style="margin-bottom: 10px;">SAKURAMOONS TEAM</p>
+            <h2>管理團隊與成員介紹</h2>
+            <p style="font-size: 18px;">
+                守護著櫻之幻境的核心力量。櫻月伺服器由熱愛 Minecraft 的玩家共同維護，我們致力於建立一個友善、精緻且充滿人情味的溫馨社群。
             </p>
         </div>
-        <div class="world-art">
-            <div class="big-moon"></div>
-            <div class="silhouette">🏯</div>
-            <div class="star s1"></div>
-            <div class="star s2"></div>
-            <div class="star s3"></div>
-        </div>
-    </div>
 
-    <!-- 團隊簡介區 (Team Intro teaser) -->
-    <div class="section" id="team-teaser">
-        <div class="section-title">
-            <h2>伺服器團隊</h2>
-            <p>守護櫻之幻境的核心力量。我們重視每一位成員的付出，並持續歡迎熱情的夥伴加入！</p>
-        </div>
-        <div class="roles">
-            <div>
+        <!-- 現役團隊成員 -->
+        <h3 style="margin-top: 50px; border-left: 4px solid var(--pink); padding-left: 15px; color: var(--pink2);">現役成員</h3>
+        <div class="roles" style="margin-top: 20px;">
+            <div style="border: 1px solid var(--pink); background: linear-gradient(135deg, rgba(242, 154, 181, 0.1), transparent); box-shadow: 0 0 20px rgba(242, 154, 181, 0.05);">
                 <span class="role-icon">👑</span>
                 <div class="role-info">
-                    <strong>管理組 Admin</strong>
-                    <small>負責伺服器營運決策與日常秩序維護。</small>
+                    <strong>服主 Owner</strong>
+                    <small style="color: var(--pink2); font-weight: bold;">我 (服主)</small>
+                    <p>負責伺服器的整體營運、世界觀策劃與核心決策。致力於提供玩家最完美的和風生存世界。</p>
                 </div>
             </div>
-            <div>
+            
+            <div style="opacity: 0.7;">
+                <span class="role-icon">👮</span>
+                <div class="role-info">
+                    <strong>管理員 Administrator</strong>
+                    <small style="color: var(--muted);">（目前從缺）</small>
+                    <p>負責遊戲內日常秩序維護、玩家問題排解以及違規行為審查。</p>
+                </div>
+            </div>
+
+            <div style="opacity: 0.7;">
                 <span class="role-icon">🔧</span>
                 <div class="role-info">
-                    <strong>技術組 Developer</strong>
-                    <small>負責插件調試、網頁開發與硬體維護。</small>
-                </div>
-            </div>
-            <!-- 引導點擊前往獨立團隊簡介與招募頁面 -->
-            <div style="cursor: pointer; border: 1px solid var(--pink); background: rgba(242, 154, 181, 0.05); position: relative; transition: 0.2s;" onclick="window.location.href='team/'">
-                <span class="role-icon" style="color: var(--pink);">🌸</span>
-                <div class="role-info">
-                    <strong>團隊簡介 (正在招募中)</strong>
-                    <small>我們正在尋找優秀的小幫手、建築師與企劃！點擊此處了解團隊詳情與招募規範。</small>
-                    <div style="margin-top: 15px; font-weight: bold; color: var(--pink2); font-size: 13px;">
-                        前往專屬頁面 ➔
-                    </div>
+                    <strong>技術人員 Developer</strong>
+                    <small style="color: var(--muted);">（目前從缺）</small>
+                    <p>負責伺服器插件調試、後台維護與網頁開發，確保伺服器穩定流暢運行。</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- 立即加入區 (Join Section) -->
-    <div class="section join" id="join" style="margin: auto;">
-        <div class="join-box">
-            <h2>立即遊玩櫻月伺服器</h2>
-            <p>複製下方 IP 位址，在 Minecraft 中新增伺服器即可直接進入遊戲！</p>
-            <div class="server-address" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
-                <span>伺服器位址 (IP)</span>
-                <code id="ip-text" style="font-family: monospace; font-size: 15px; font-weight: bold; color: var(--pink2);">minecraft.sakuamoons.com</code>
-                <div style="display: flex; gap: 8px;">
-                    <button onclick="copyIP()" class="primary" style="border: 0; border-radius: 9px; padding: 7px 16px; cursor: pointer; font-weight: bold; background: var(--pink); color: #24151b;">複製 IP</button>
-                    <a href="https://discord.gg/K4SQHdcmTw" target="_blank" class="button" style="background: #5865f2; color: white; border-color: transparent; padding: 7px 16px; font-size: 13px; border-radius: 9px; text-decoration: none; display: inline-flex; align-items: center; font-weight: bold;">官方 DC 💬</a>
-                </div>
+    <!-- 職缺招募區 -->
+    <div class="section" style="background: rgba(255,255,255,0.01); border-top: 1px solid var(--line); padding-top: 60px;">
+        <div class="section-title">
+            <h2>開放招募職缺</h2>
+            <p>我們正在尋找志同道合的夥伴！如果你對和風生存充滿熱情，歡迎加入我們的開發與管理行列，一起雕琢這片美麗的櫻花世界。</p>
+        </div>
+
+        <div class="recruits-grid">
+            <div class="recruit-card">
+                <span>🏗️</span>
+                <h4>建築／地圖製作</h4>
+                <p>負責伺服器主城、節日活動場景、副本與景點的規劃與搭建，精通日式和風與古風建築風格者尤佳。</p>
+            </div>
+            
+            <div class="recruit-card">
+                <span>⚙️</span>
+                <h4>遊戲內市面插件設計</h4>
+                <p>負責自訂怪物、RPG 物品屬性、特色技能、經濟與任務系統等市面常見插件的細節設計與配置。</p>
+            </div>
+
+            <div class="recruit-card">
+                <span>🎨</span>
+                <h4>美術／設計</h4>
+                <p>負責伺服器官方宣傳圖、網頁視覺素材、自訂材質包（如有）以及社群貼圖的繪製與排版設計。</p>
+            </div>
+
+            <div class="recruit-card">
+                <span>📋</span>
+                <h4>活動企劃</h4>
+                <p>策劃伺服器內部的節日祭典、生存競賽、副本探險等趣味活動，並編寫活動流程與規劃獎勵項目。</p>
+            </div>
+
+            <div class="recruit-card">
+                <span>💬</span>
+                <h4>社群管理</h4>
+                <p>管理 Discord 伺服器與玩家社群，解答玩家疑問，籌備玩家互動，維護良好友善的玩家交流氛圍。</p>
+            </div>
+
+            <div class="recruit-card">
+                <span>🧪</span>
+                <h4>測試人員</h4>
+                <p>搶先體驗新版本與新功能！測試插件相容性、尋找遊戲漏洞 (Bug)，提供優化反饋，確保玩家遊玩品質。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 招募引導 CTA 區 (Google 表單連結) -->
+    <div class="recruitment-section">
+        <div class="cta-container">
+            <h3>🌸 遞交您的申請</h3>
+            <p>
+                想要成為櫻月團隊的一員，為大家創造更棒的遊戲體驗嗎？<br>
+                我們已為你準備好便捷的招募流程，點擊下方按鈕即可開啟 Google 表單進行申請填寫。
+            </p>
+            <a href="https://forms.gle/8wPSByePEnMnqgU47" target="_blank" class="button primary" style="font-size: 18px; padding: 14px 36px; text-decoration: none;">
+                填寫 Google 招募表單 ➔
+            </a>
+            <div style="margin-top: 15px; font-size: 13px; color: var(--muted);">
+                * 點擊後將會在新分頁開啟 Google Forms 頁面。填寫完畢後我們將儘快透過 Discord 與您聯絡！
             </div>
         </div>
     </div>
@@ -147,19 +234,6 @@
         </div>
         
     </footer>
-
-    <!-- 複製 IP 的腳本 -->
-    <script>
-        function copyIP() {
-            const ipText = document.getElementById('ip-text').innerText;
-            navigator.clipboard.writeText(ipText).then(() => {
-                alert('櫻月伺服器 IP 已成功複製！快登入 Minecraft 吧 🌸');
-            }).catch(err => {
-                console.error('無法複製 IP：', err);
-                alert('複製失敗，請手動選取複製：' + ipText);
-            });
-        }
-    </script>
 
     <!-- 櫻花飄落特效 (Falling Sakura Animation) -->
     <script>
